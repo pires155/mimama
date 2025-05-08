@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffd9ec;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .imagem {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    color: #444;
+  }
+  
+  .botoes {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  button:hover {
+    background-color: #ff85c1;
+  }
+  
+  .envelope {
+    position: relative;
+    width: 80vw;  /* Ajuste para 80% da largura da tela */
+    height: 60vw; /* Ajuste proporcional à largura */
+    max-width: 300px; /* Limite de largura */
+    max-height: 250px; /* Limite de altura */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 30px;
+    transform: scale(0);
+    transition: transform 1s ease-in-out;
+  }
+  
+  .envelope .flap {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #ff69b4;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .envelope .top {
+    top: 0;
+    transform-origin: top;
+    transform: rotateX(0deg);
+  }
+  
+  .envelope .bottom {
+    bottom: 0;
+    transform-origin: bottom;
+    transform: rotateX(0deg);
+  }
+  
+  .envelope .content {
+    display: none;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .envelope.open .top {
+    transform: rotateX(180deg);
+  }
+  
+  .envelope.open .bottom {
+    transform: rotateX(-180deg);
+  }
+  
+  .envelope.open .content {
+    display: block;
+  }
+  
